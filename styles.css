@@ -1,0 +1,100 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+img {
+  padding: 0;
+}
+.container {
+  /* display: flex; */
+  width: 1200px;
+  height: 1667px;
+}
+.main {
+  /* display: flex; */
+  width: 815px;
+  padding: 58px 55px;
+}
+.section {
+  padding-bottom: 49px;
+}
+
+.work__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.sidebar {
+  width: 385px;
+  height: 1667px;
+  background-color: #86a3b4;
+}
+img {
+  width: 385px;
+}
+.title {
+  padding-bottom: 28px;
+  margin-bottom: ;
+  border-bottom: 5px solid #000000;
+}
+
+/* body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;   
+}
+.top-part{
+    display: flex;
+    justify-content: space-between;
+}
+.name{
+    font-style: oblique;
+    border-bottom: 1px solid rgb(193, 191, 191);
+}
+img{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid rgb(193, 191, 191);
+}
+.job-title{
+    font-weight: bold;
+    border-bottom: 1px solid rgb(193, 191, 191);
+}
+.cv-table{
+    width: 100%;
+    background-color: rgb(220, 220, 248);
+}
+.table-title{
+    text-transform: uppercase;
+    background-color: rgb(193, 191, 191);
+}
+a:link{
+    color: #00f;
+}
+a:visited{
+    color: #005;
+}
+a:hover{
+    text-decoration: none;
+}
+.skills-list{
+    list-style-type:square;
+    border-bottom: 1px solid rgb(193, 191, 191);
+}
+.achievements-list{
+    border-bottom: 1px solid rgb(193, 191, 191);
+} */
