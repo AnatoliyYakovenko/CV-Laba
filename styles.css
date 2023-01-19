@@ -70,6 +70,7 @@ span {
 .sidebar {
   width: 385px;
   height: 1667px;
+  border-right: 1px solid #000000;
   background-color: #86a3b4;
 }
 .name {
