@@ -79,6 +79,10 @@ span {
   padding-bottom: 36px;
   padding-left: 40px;
 }
+.hide-wrap {
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
 .main-title {
   font-size: 40px;
   line-height: 48px;
@@ -110,6 +114,9 @@ a {
   font-size: 16px;
   line-height: 19px;
   color: #1c2e8c;
+}
+a:hover {
+  color: #1962f5;
 }
 .languages {
   padding-left: 42px;
@@ -148,49 +155,107 @@ a {
   margin-bottom: 23px;
 }
 
-/* body{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;   
+/* FORM */
+
+.form-container {
+  margin: auto;
+  max-width: 1024px;
 }
-.top-part{
-    display: flex;
-    justify-content: space-between;
+.info {
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.name{
-    font-style: oblique;
-    border-bottom: 1px solid rgb(193, 191, 191);
+
+input[type="email"],
+textarea,
+#work-type {
+  display: block;
+  width: 460px;
+  height: 48px;
+  appearance: none;
+  background-color: #f8fafc;
+  border-color: transparent;
+  margin-top: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #3b4256;
+  border: none;
+  border-radius: 4px;
+  border-color: #0048d9;
 }
-img{
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    border: 2px solid rgb(193, 191, 191);
+input[type="email"]:invalid,
+textarea:invalid,
+#work-type:invalid {
+  border: 1px solid #ed0131;
 }
-.job-title{
-    font-weight: bold;
-    border-bottom: 1px solid rgb(193, 191, 191);
+input[type="email"]:valid {
+  border: 1px solid #0e6245;
 }
-.cv-table{
-    width: 100%;
-    background-color: rgb(220, 220, 248);
+#work-type:invalid label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #6f7482;
 }
-.table-title{
-    text-transform: uppercase;
-    background-color: rgb(193, 191, 191);
+input[type="email"] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
 }
-a:link{
-    color: #00f;
+#work-type {
+  min-width: 484px;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: url("./Vector.svg") no-repeat center right 10px;
+  background-color: #f8fafc;
 }
-a:visited{
-    color: #005;
+textarea {
+  height: 139px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px 12px 36px 12px;
 }
-a:hover{
-    text-decoration: none;
+.submit:enabled {
+  padding: 5px 16px;
+  background-color: #0048d9;
+  border-radius: 6px;
+  color: #ffffff;
+  border: none;
+  border-color: #002266;
+  cursor: pointer;
 }
-.skills-list{
-    list-style-type:square;
-    border-bottom: 1px solid rgb(193, 191, 191);
+.submit:hover {
+  background-color: #002266;
+  color: #ffffff;
+  border: none;
 }
-.achievements-list{
-    border-bottom: 1px solid rgb(193, 191, 191);
-} */
+.submit:focus {
+  color: #0048d9;
+  border: 1px solid #0048d9;
+  background-color: transparent;
+}
+.submit:focus:hover {
+  color: #0048d9;
+  border: 1px solid #0048d9;
+  background-color: #e7f2fd;
+}
+.submit:disabled {
+  background: rgba(0, 72, 217, 0.45);
+  border-radius: 8px;
+  color: #ffffff;
+  border: none;
+}
+.submit:focus:disabled {
+  background: transparent;
+  border-radius: 4px;
+  color: #0048d9;
+  border: none;
+}
