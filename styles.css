@@ -5,9 +5,14 @@
   --color-sidebar-bgc: #86a3b4;
   --color-font-primary: #1e1e1e;
   --color-font-secondary: #263036;
-  --color-white-elements: #ffffff;
-  --color-black-elements: #000000;
-  --color-last-name-links: #1c2e8c;
+  --color-main-bgc: #ffffff;
+  --color-name: #ffffff;
+  --color-surname: #1c2e8c;
+  --color-font-strong: #000000;
+  --color-lines-main: #000000;
+  --color-lines-sidebar: #1e1e1e;
+  --color-links: #1c2e8c;
+  --color-links-hover: #1962f5;
 
   /* font */
 
@@ -47,7 +52,7 @@ body {
 }
 span {
   font-weight: 400;
-  color: var(--color-black-elements);
+  color: var(--color-font-strong);
 }
 .container {
   display: flex;
@@ -56,6 +61,7 @@ span {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-main-bgc);
 }
 .main {
   padding: 58px 55px;
@@ -81,7 +87,7 @@ span {
 .work__list {
   font-size: 14px;
   line-height: 17px;
-  color: var(--color-black-elements);
+  color: var(--color-font-strong);
 }
 .work__item:not(:last-child) {
   margin-bottom: 15px;
@@ -94,7 +100,7 @@ span {
   top: 0%;
   width: 385px;
   height: 1667px;
-  border-right: 1px solid var(--color-black-elements);
+  border-right: 1px solid var(--color-lines);
   background-color: var(--color-sidebar-bgc);
 }
 .name {
@@ -109,10 +115,10 @@ span {
 .main-title {
   font-size: 40px;
   line-height: 48px;
-  color: var(--color-white-elements);
+  color: var(--color-name);
 }
 .surname {
-  color: var(--color-last-name-links);
+  color: var(--color-surname);
 }
 .photo {
   padding-bottom: 50px;
@@ -136,10 +142,10 @@ span {
 a {
   font-size: 16px;
   line-height: 19px;
-  color: var(--color-last-name-links);
+  color: var(--color-links);
 }
 a:hover {
-  color: #1962f5;
+  color: var(--color-links-hover);
 }
 .languages {
   padding-left: 42px;
@@ -161,7 +167,7 @@ a:hover {
   font-size: 36px;
   line-height: 44px;
   color: var(--color-font-primary);
-  border-bottom: 5px solid var(--color-black-elements);
+  border-bottom: 5px solid var(--color-lines-main);
 }
 .sidebar-title {
   margin-bottom: 31px;
@@ -169,7 +175,7 @@ a:hover {
   font-size: 32px;
   line-height: 39px;
   color: var(--color-font-secondary);
-  border-bottom: 6px solid var(--color-font-primary);
+  border-bottom: 6px solid var(--color-lines-sidebar);
 }
 .contact-title {
   margin-bottom: 31px;
