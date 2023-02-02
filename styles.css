@@ -301,3 +301,20 @@ textarea {
   color: #0048d9;
   border: none;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 420px;
+    flex-direction: column-reverse;
+  }
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+  .main {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .skills__list {
+    width: 100%;
+  }
+}
