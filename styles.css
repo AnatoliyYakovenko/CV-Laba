@@ -43,8 +43,10 @@ ul {
   list-style: none;
 }
 img {
+  margin: 0;
   padding: 0;
 }
+
 body {
   font-family: var(--font-family);
   font-weight: 600;
@@ -102,6 +104,7 @@ span {
   height: 1667px;
   border-right: 1px solid var(--color-lines);
   background-color: var(--color-sidebar-bgc);
+  box-shadow: 10px 0px 10px rgba(52, 52, 52, 0.7);
 }
 .name {
   padding-top: 58px;
@@ -290,7 +293,7 @@ textarea {
   background-color: #e7f2fd;
 }
 .submit:disabled {
-  background: rgba(0, 72, 217, 0.45);
+  background: rgba(2, 29, 85, 0.45);
   border-radius: 8px;
   color: #ffffff;
   border: none;
@@ -301,6 +304,7 @@ textarea {
   color: #0048d9;
   border: none;
 }
+
 @media screen and (max-width: 768px) {
   .container {
     max-width: 420px;
@@ -309,6 +313,7 @@ textarea {
   .sidebar {
     position: static;
     width: 100%;
+    box-shadow: none;
   }
   .main {
     margin-right: auto;
@@ -316,5 +321,21 @@ textarea {
   }
   .skills__list {
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  img:hover {
+    transform: scale(1.5) translate(64px, 50px);
+    box-shadow: 10px 0px 20px rgba(40, 5, 219, 0.8);
+    cursor: pointer;
+  }
+
+  .previous {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .previous:hover {
+    opacity: 1;
+    cursor: pointer;
   }
 }
