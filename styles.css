@@ -43,6 +43,7 @@ ul {
   list-style: none;
 }
 img {
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -325,7 +326,7 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   img:hover {
-    transform: scale(1.5) translate(64px, 50px);
+    transform: scale(1.5) translate(55px, 45px);
     box-shadow: 10px 0px 20px rgba(40, 5, 219, 0.8);
     cursor: pointer;
   }
