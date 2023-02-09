@@ -193,12 +193,12 @@ a:hover {
 /* FORM */
 
 .form-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 1024px;
-  animation: formScale 5000ms linear;
+  position: fixed;
+  top: calc(50% - 350px);
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 700px;
+  animation: formScale 1500ms ease-in;
 }
 @keyframes formScale {
   from {
@@ -348,10 +348,10 @@ textarea {
     cursor: pointer;
   }
   .sidebar {
-    animation: rise 3000ms;
+    animation: rise 2500ms;
   }
   .main {
-    animation: rise 2500ms;
+    animation: rise 3000ms;
   }
   @keyframes rise {
     from {
