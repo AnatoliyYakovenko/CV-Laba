@@ -44,6 +44,7 @@ ul {
 }
 img {
   width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -105,7 +106,7 @@ span {
   height: 1667px;
   border-right: 1px solid var(--color-lines);
   background-color: var(--color-sidebar-bgc);
-  box-shadow: 10px 0px 10px rgba(52, 52, 52, 0.7);
+  box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
 }
 .name {
   padding-top: 58px;
@@ -153,6 +154,7 @@ a:hover {
 }
 .languages {
   padding-left: 42px;
+  padding-right: 54px;
 }
 .languages__item {
   margin-bottom: 15px;
@@ -326,8 +328,10 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   img:hover {
-    transform: scale(1.5) translate(55px, 45px);
-    box-shadow: 10px 0px 20px rgba(40, 5, 219, 0.8);
+    padding-bottom: 0px;
+    height: auto;
+    transform: scale(1.5) translate(64px, 45px);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
     cursor: pointer;
   }
 
