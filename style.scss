@@ -1,4 +1,4 @@
-/* MAIN */
+@import "theme";
 :root {
   /* colors */
 
@@ -22,6 +22,9 @@
   --space-main-section: 49px;
   --space-title: 28px;
 }
+$sidebarAnimationSpeed: 2500ms;
+$mainAnimationSpeed: 3000ms;
+
 h1,
 h2,
 h3,
@@ -50,8 +53,11 @@ img {
 }
 
 body {
-  font-family: var(--font-family);
-  font-weight: 600;
+  font: {
+    family: var(--font-family);
+    weight: 600;
+  }
+
   color: var(--color-font-secondary);
 }
 span {
@@ -88,13 +94,15 @@ span {
   line-height: 19px;
   list-style-type: disc;
 }
-.work__list {
-  font-size: 14px;
-  line-height: 17px;
-  color: var(--color-font-strong);
-}
-.work__item:not(:last-child) {
-  margin-bottom: 15px;
+.work {
+  &__list {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-font-strong);
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 /* SIDEBAR */
@@ -131,14 +139,15 @@ span {
 .contact {
   padding-bottom: 36px;
   padding-left: 40px;
-}
-.contact__item:not(:last-child) {
-  margin-bottom: 36px;
-}
-.contact__discr {
-  margin-bottom: 11px;
-  font-size: 24px;
-  line-height: 29px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 36px;
+  }
+  &__discr {
+    margin-bottom: 11px;
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 .contacts {
   font-size: 16px;
@@ -148,19 +157,21 @@ a {
   font-size: 16px;
   line-height: 19px;
   color: var(--color-links);
-}
-a:hover {
-  color: var(--color-links-hover);
+
+  &:hover {
+    color: var(--color-links-hover);
+  }
 }
 .languages {
   padding-left: 42px;
   padding-right: 54px;
-}
-.languages__item {
-  margin-bottom: 15px;
-  font-size: 20px;
-  line-height: 24px;
-  color: var(--color-font-primary);
+
+  &__item {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-font-primary);
+  }
 }
 .education__item {
   font-size: 16px;
@@ -245,9 +256,11 @@ input[type="email"]:valid {
   border: 1px solid #0e6245;
 }
 #work-type:invalid label {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
+  font: {
+    style: normal;
+    weight: 400;
+    size: 16px;
+  }
   line-height: 150%;
   letter-spacing: 0.01em;
   color: #6f7482;
@@ -273,41 +286,43 @@ textarea {
   margin-bottom: 10px;
   padding: 12px 12px 36px 12px;
 }
-.submit:enabled {
-  padding: 5px 16px;
-  background-color: #0048d9;
-  border-radius: 6px;
-  color: #ffffff;
-  border: none;
-  border-color: #002266;
-  cursor: pointer;
-}
-.submit:hover {
-  background-color: #002266;
-  color: #ffffff;
-  border: none;
-}
-.submit:focus {
-  color: #0048d9;
-  border: 1px solid #0048d9;
-  background-color: transparent;
-}
-.submit:focus:hover {
-  color: #0048d9;
-  border: 1px solid #0048d9;
-  background-color: #e7f2fd;
-}
-.submit:disabled {
-  background: rgba(2, 29, 85, 0.45);
-  border-radius: 8px;
-  color: #ffffff;
-  border: none;
-}
-.submit:focus:disabled {
-  background: transparent;
-  border-radius: 4px;
-  color: #0048d9;
-  border: none;
+.submit {
+  &:enabled {
+    padding: 5px 16px;
+    background-color: #0048d9;
+    border-radius: 6px;
+    color: #ffffff;
+    border: none;
+    border-color: #002266;
+    cursor: pointer;
+  }
+  &:hover {
+    background-color: #002266;
+    color: #ffffff;
+    border: none;
+  }
+  &:focus {
+    color: #0048d9;
+    border: 1px solid #0048d9;
+    background-color: transparent;
+  }
+  &:focus:hover {
+    color: #0048d9;
+    border: 1px solid #0048d9;
+    background-color: #e7f2fd;
+  }
+  &:disabled {
+    background: rgba(2, 29, 85, 0.45);
+    border-radius: 8px;
+    color: #ffffff;
+    border: none;
+  }
+  &:focus:disabled {
+    background: transparent;
+    border-radius: 4px;
+    color: #0048d9;
+    border: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -347,11 +362,8 @@ textarea {
     transition: opacity 350ms ease-in-out;
     cursor: pointer;
   }
-  .sidebar {
-    animation: rise 2500ms;
-  }
-  .main {
-    animation: rise 3000ms;
+  @mixin anime($name, $speed) {
+    animation: $name $speed;
   }
   @keyframes rise {
     from {
@@ -362,5 +374,11 @@ textarea {
       transform: translateY(0vh);
       visibility: visible;
     }
+  }
+  .sidebar {
+    @include anime(rise, $sidebarAnimationSpeed);
+  }
+  .main {
+    @include anime(rise, $mainAnimationSpeed);
   }
 }
