@@ -6,61 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Запропонувати роботу</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="form-container">
+    <div class="block container mx-auto box-border w-1/2 p-20 border-4 border-gray-300 bg-gray-150 ">
         <div class="header-wrap">
-            <h1>Hire me</h1>
-            <h2>Contact information</h2>
-            <table class="info" cellspacing="0" cellpadding="10px">
-                <thead>
+            <h1 class="text-5xl">Hire me</h1>
+            <h2 class="text-2xl">Contact information</h2>
+            <table class="my-8" cellspacing="0" cellpadding="10px">
+                <thead class="border-2 border-gray-900">
                     <tr>
-                        <th class="info" align="left">Phone</th>
-                        <td class="info" align="left">+380673207191</td>
+                        <th class="border-2 border-gray-900" align="left">Phone</th>
+                        <td class="border-2 border-gray-900" align="left">+380673207191</td>
                     </tr>
                     <tr>
-                        <th class="info" align="left">Address</th>
-                        <td class="info" align="left">Obukhiv, Ukraine</td>
+                        <th class="border-2 border-gray-900" align="left">Address</th>
+                        <td class="border-2 border-gray-900" align="left">Obukhiv, Ukraine</td>
                     </tr>
                 </thead>
             </table>
         </div>
-        <form class="form" action="./form.html" method="get">
+        <form
+            class=" text-gray-700 bg-gray-400 px-8 py-5 max-w-2xl bg-white shadow-md rounded pt-6 pb-8 mb-4 border-2 border-gray-900"
+            action="./form.html" method="get">
             <fieldset>
-                <legend>Contact form</legend>
-                <table>
+                <legend class="mb-2 text-gray-900">Contact form</legend>
+                <table class="mb-6">
                     <tbody>
                         <tr>
-                            <td>
-                                <label for="email" align="left">
+                            <td class="pb-4">
+                                <label class="text-gray-900" for="email" align="left">
                                     E-mail <sup style="color: red">*</sup>:</label>
 
-                                <input type="email" required id="email" />
+                                <input
+                                    class="appearance-none w-64 p-1 ml-6 rounded leading-tight focus:outline-none focus:shadow-outline"
+                                    placeholder=" E-mail" type="email" required id="email" />
                             </td>
                         </tr>
                         <tr>
-                            <td align="left" valign="top">
-                                <label for="description"> Description:</label>
+                            <td class="pb-2" align="left" valign="top">
+                                <label class="text-gray-900" for="description"> Description:</label>
 
-                                <textarea name="description" id="description" cols="30" rows="4">
+                                <textarea
+                                    class="appearance-none w-64 p-1 rounded focus:outline-none focus:shadow-outline"
+                                    name="description" id="description" cols="30" rows="4">
                     </textarea>
                             </td>
                         </tr>
                         <tr>
-                            <td align="left"><label for="work-type"> Work type:</label>
+                            <td align="left"><label class="text-gray-900" for="work-type"> Work type:</label>
 
-                                <select name="work-type" id="work-type">
-                                    <option value="in-office">In office</option>
-                                    <option value="remote">Remote</option>
-                                    <option value="">One project type</option>
+                                <select class="w-64 p-1 ml-2 rounded" name="work-type" id="work-type">
+                                    <option class="text-gray-700" value="in-office">In office</option>
+                                    <option class="text-gray-700" value="remote">Remote</option>
+                                    <option class="text-gray-700" value="">One project type</option>
                                 </select>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <input class="submit" type="submit" value="Hire me" />
+                <input
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit" value="Hire me" />
             </fieldset>
         </form>
     </div>
