@@ -4,6 +4,7 @@ const refs = {
   bFlag: document.querySelector("#b"),
   cFlag: document.querySelector("#c"),
   dFlag: document.querySelector("#d"),
+  eFlag: document.querySelector("#e"),
 };
 
 const handleClick = (event) => {
@@ -19,6 +20,8 @@ const handleKeyDown = (event) => {
   } else if (event.key === "c" || event.key === "C") {
     refs.cFlag.scrollIntoView();
   } else if (event.key === "d" || event.key === "D") {
+    refs.dFlag.scrollIntoView();
+  } else if (event.key === "e" || event.key === "E") {
     refs.dFlag.scrollIntoView();
   } else return;
 };

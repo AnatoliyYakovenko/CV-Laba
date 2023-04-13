@@ -136,6 +136,11 @@ span {
 .work__item:not(:last-child) {
   margin-bottom: 15px;
 }
+.projects__item {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--color-lines-main);
+}
 
 /* SIDEBAR */
 .sidebar {
@@ -260,7 +265,7 @@ a:hover {
   width: 500px;
   height: 700px;
   -webkit-animation: formScale 1500ms ease-in;
-          animation: formScale 1500ms ease-in;
+  animation: formScale 1500ms ease-in;
 }
 
 @-webkit-keyframes formScale {
@@ -290,14 +295,14 @@ a:hover {
   margin-bottom: 20px;
 }
 
-input[type=email],
+input[type="email"],
 textarea,
 #work-type {
   display: block;
   width: 460px;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: #f8fafc;
   border-color: transparent;
   margin-top: 0;
@@ -313,13 +318,13 @@ textarea,
   border-color: #0048d9;
 }
 
-input[type=email]:invalid,
+input[type="email"]:invalid,
 textarea:invalid,
 #work-type:invalid {
   border: 1px solid #ed0131;
 }
 
-input[type=email]:valid {
+input[type="email"]:valid {
   border: 1px solid #0e6245;
 }
 
@@ -332,7 +337,7 @@ input[type=email]:valid {
   color: #6f7482;
 }
 
-input[type=email] {
+input[type="email"] {
   min-width: 470px;
   height: 40px;
   margin-top: 10px;
@@ -451,10 +456,10 @@ textarea {
   }
   .sidebar {
     -webkit-animation: rise 2500ms;
-            animation: rise 2500ms;
+    animation: rise 2500ms;
   }
   .main {
     -webkit-animation: rise 3000ms;
-            animation: rise 3000ms;
+    animation: rise 3000ms;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
