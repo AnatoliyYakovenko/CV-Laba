@@ -1,32 +1,33 @@
-const reposList = document.querySelector(".projects__list");
-
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const repos = await fetchRepos();
-    renderReposListItems(repos);
-  } catch (error) {
-    console.log(error.message);
+class GithubAPI {
+  constructor(token, username) {
+    this.token = token;
+    this.username = username;
   }
-});
 
-async function fetchRepos() {
-  const baseUrl =
-    "https://api.github.com/users/AnatoliyYakovenko/repos?per_page=100";
+  async getRepos() {
+    const headers = new Headers();
+    headers.append("Authorization", `Token ${this.token}`);
+    try {
+      const response = await fetch(
+        `https://api.github.com/users/${this.username}/repos`,
+        {
+          headers: headers,
+        }
+      );
 
-  const allReposRaw = await fetch(baseUrl);
-  const data = await allReposRaw.json();
-  return data;
+      if (!response.ok) {
+        throw new Error("Error of getting repos");
+      }
+
+      const repos = await response.json();
+      return repos;
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }
 
-function renderReposListItems(repos) {
-  const markup = repos
-    .map(
-      ({ full_name, html_url, description }) => `<li class="projects__item">
-        <p>${full_name}</p>
-        <a href= ${html_url}>${html_url}</a>
-        ${description ? `<p>${description}</p>` : ""}
-      </li>`
-    )
-    .join("");
-  reposList.innerHTML = markup;
-}
+
+
+
+
