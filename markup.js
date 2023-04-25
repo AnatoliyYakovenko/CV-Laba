@@ -1,5 +1,4 @@
-const reposList = document.querySelector(".projects__list");
-const token = "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";
+const token = "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";
 const username = "AnatoliyYakovenko";
 const githubAPI = new GithubAPI(token, username);
 
@@ -25,5 +24,5 @@ function renderReposListItems(repos) {
         </li>`
     )
     .join("");
-  reposList.innerHTML = markup;
+  refs.reposList.innerHTML = markup;
 }
