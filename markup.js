@@ -1,4 +1,4 @@
-const token = "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";
+const token = "";
 const username = "AnatoliyYakovenko";
 const githubAPI = new GithubAPI(token, username);
 
